@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+.container {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: rgb(0, 0, 0);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #7bb0bc44, 0 0 50px rgb(255, 255, 255), 0 0 100px #7bb0bc44;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 0 10px #0000009e, 0 0 50px rgb(255, 255, 255), 0 0 100px #4fc3dc44;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.heading{
+    font-size: 90px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    margin-top: 30%;
+    margin-left: 38.5%;
+}
+
+
+.diamond {
+    background-color: rgb(53, 53, 53);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    transition: all 0.8s;
+}
+
+
+.A1 { top: 25%; left: 15%; }
+.A2 { top: 60%; left: 70%; }
+.A3 { top: 10%; left: 50%; }
+.A4 { top: 85%; left: 80%; }
+.A5 { top: 35%; left: 40%; }
+.A6 { top: 75%; left: 10%; }
+.A7 { top: 55%; left: 90%; }
+.A8 { top: 90%; left: 30%; }
+.A9 { top: 20%; left: 85%; }
+.A10 { top: 65%; left: 25%; }
+.A11 { top: 15%; left: 85%; }
+
+
+
+.circle {
+    width: 90px;
+    height: 90px;
+    border: 2px ;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    transition: all 0.2s;
+}
+
+
+.circle:hover{
+    width: 150px;
+    height: 150px;
+     border-radius: 100px;
+    transition: all 0.2s;
+
+    font-size: 100px;
+    background-size: cover; 
+
+}
+
+.expanded {
+    position: fixed; 
+    z-index: 1;
+    width: 750px;
+    height: 750px;
+    border-radius: 20px;
+    background: rgb(60, 58, 58);
+    font-size: 100px;
+
+
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background-size: cover; 
+    transition: all 0.2s;
+}
+
+.expanded.circle:hover {
+    width: 800px;
+    height: 800px;
+
+    transition: all 0.2s;
+    background-size: cover;
+    opacity: 0.85;
+}
+
+
+.one { background-image: url('2019/image1.jpg');}
+.two { background-image: url('2019/image\ 2.jpg');}
+.three { background-image: url('2019/image\ 2.jpg');}
+.four { background-image: url('2020/2191588.jpg');}
+.five { background-image: url('2020/ab67616d0000b273ad86c21f8ecce4b9873b3dec.jpeg')}
+.six { background-image: url('2020/frank-ocean-cover-new-new.webp')} 
+.seven { background-image: url('2021/Glass_Animals_-_Heat_Waves.png');}
+.eight { background-image: url('2021/More_Life-Drake-cover.webp'); }
+.nine { background-image: url('2021/Sting_-_Shape_of_my_heart.jpg'); }
+.ten { background-image: url('2022/ab67616d0000b273c1c8d2889455db6d03d309ed.jpeg');}
+.eleven { background-image: url('2022/artworks-XTdw6XGAR3WX-0-t500x500.jpg');}
+.twelve { background-image: url('2022/More_Life-Drake-cover\ copy.webp');}
+.thirteen { background-image: url('2023/ab67616d0000b273675561f3defd1d5a551936a8.jpeg');}
+.fourteen { background-image: url('2023/Lil-Baby-Gunna-Drip-Harder.webp');}
+.fifteen { background-image: url('2023/maxresdefault.jpg');}
+.sixteen { background-image: url('2024/350x350.jpg'); }
+.seventeen { background-image: url('2024/5533ab0b513f3e02f481483b9442860e.999x999x1.jpg'); }
+.eighteen { background-image: url('2024/artworks-6BU67RpGI27g-0-t500x500.jpg'); }
+
+
+
+.songMetadataLeft {
+    display: none;
+    position: fixed;
+    top:6vh;
+    left:8vw;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    
+
+    width: 15vw;
+    height: 90vh;
+    overflow: auto;
+}
+
+.songMetadataRight {
+    display: none;
+    position: fixed;
+    top:6vh;
+    left:77vw;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+
+    width: 15vw;
+    height: 40vh;
+    overflow: auto;
+}
+
+
+/* in Metadata Styling */
+
+.songMetadataLeft h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+   font-family:  "Bebas Neue", sans-serif;
+}
+
+.songMetadataLeft p {
+    font-size: 13px;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal; 
+
+}
+
+.songMetadataRight h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+   font-family:  "Bebas Neue", sans-serif;
+}
+
+.songMetadataRight h3 {
+    
+    margin-bottom: 10px;
+   font-family:  "Bebas Neue", sans-serif;
+}
+
+.songMetadataRight p {
+    font-size: 13px;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal; 
+
+}
+
+
+a{
+color: rgb(0, 0, 0);
+font-family:  "Bebas Neue", sans-serif;
+}
+
+
+
